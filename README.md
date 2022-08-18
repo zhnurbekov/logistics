@@ -5,3 +5,7 @@
 
 `npm run build` — сборка production-версии
 
+Стэк техналоги :
+React
+Redux
+Material UI
