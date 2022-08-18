@@ -6,6 +6,6 @@
 `npm run build` — сборка production-версии
 
 Стэк техналоги :
-React
-Redux
+React ,
+Redux ,
 Material UI
