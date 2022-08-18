@@ -27,7 +27,7 @@ export default function Details({ setData, row, data }) {
       </div>
       <ActFiles setData={setData} row={row} data={data} />
       <div className="flex items-center">
-        <Button variant={'contained'} className={classes.btn}>
+        <Button variant={'contained'} className={classes.btn} sx={{ fontWeight: 700 }}>
           <CopyIcon style={{ fontSize: 15 }} />
           РЕДАКТИРОВАТЬ
         </Button>

@@ -67,7 +67,7 @@ export const useStyles = makeStyles({
     textTransform: 'none !important',
     fontSize: '13px !important',
     height: '40px !important',
-    fontWeight: '700 !important',
+    // fontWeight: '700 !important',
   },
   splitBtn: {
     borderRadius: '8px !important',

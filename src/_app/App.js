@@ -2,13 +2,17 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ThemeProvider from '../common/ThemeProvider/ThemeProvider';
 import Root from './Root';
+import { Provider } from 'react-redux';
+import { store } from '../_helpers/store';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ThemeProvider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ThemeProvider>
           <Root />
-      </ThemeProvider>
-    </BrowserRouter>
+        </ThemeProvider>
+      </BrowserRouter>
+    </Provider>
   );
 }

@@ -21,6 +21,17 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  //-webkit-font-smoothing: subpixel-antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  //-moz-osx-font-smoothing: grayscale;
+  //-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
 }
 
 .content {
@@ -136,6 +147,12 @@ a {
   width: calc(100% - 270px);
 }
 
-.content-body{
-  min-height: calc(100vh - 121px)
+.content-body {
+  min-height: calc(100vh - 121px);
+}
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
 }

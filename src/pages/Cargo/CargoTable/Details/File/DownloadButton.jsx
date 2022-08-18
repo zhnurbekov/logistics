@@ -12,7 +12,12 @@ export default function DownloadButton({ row, setFiles }) {
       <UploadButton onUpload={(file) => setFiles(file, row.id)}>
         {({ upLoad }) => {
           return (
-            <Button onClick={upLoad} variant={'contained'} className={classes.btn}>
+            <Button
+              onClick={upLoad}
+              variant={'contained'}
+              className={classes.btn}
+              sx={{ fontWeight: 400 }}
+            >
               <AttachFileIcon style={{ fontSize: 15 }} />
               Добавить
             </Button>

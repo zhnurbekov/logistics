@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,10 +10,26 @@ import LogOutDialog from './Dialog/LogOutDialog';
 import { TextField } from '@mui/material';
 import SearchIcon from '../../media/Icons/SearchIcon';
 import LogOutIcon from '../../media/Icons/LogOutIcon';
+import { useDispatch, useSelector } from 'react-redux';
+import { searchModule, setSearchText } from './SearchDucks';
 
 export default function Header() {
+  const [timeOutId, registerTimeOut] = useState(null);
   const logOutDialog = useSimpleModal();
+  const { searchText } = useSelector((state) => state[searchModule]);
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  const onSearch = ({ target: { value } }) => {
+    dispatch(setSearchText(value));
+    // clearTimeout(timeOutId);
+    // registerTimeOut(
+    //   setTimeout(() => {
+    //     dispatch(setSearchText(value));
+    //   }, 1000)
+    // );
+  };
+
   return (
     <StyledHeader>
       <AppBar color={'transparent'} position="static" elevation={0}>
@@ -21,6 +37,7 @@ export default function Header() {
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1 }}>
               <TextField
+                value={searchText}
                 fullWidth={false}
                 className={classes.search}
                 variant="outlined"
@@ -31,6 +48,7 @@ export default function Header() {
                 }}
                 sx={headerSx.searchField}
                 placeholder={'Найти коносамент, груз, заказ и др.'}
+                onChange={onSearch}
               />
             </Box>
             <Box sx={{ flexGrow: 0 }}>
