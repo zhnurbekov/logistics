@@ -5,6 +5,7 @@ import Root from './Root';
 import { Provider } from 'react-redux';
 import { store } from '../_helpers/store';
 
+export const dispatch = store.dispatch;
 export default function App() {
   return (
     <Provider store={store}>

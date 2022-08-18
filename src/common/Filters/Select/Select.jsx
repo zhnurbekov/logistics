@@ -43,7 +43,7 @@ function SelectComponent(props) {
               root: classes.root,
             }}
             sx={{ height: '56px' }}
-            key={option.name}
+            key={option.value}
             value={option.value}
             onClick={() => onSelect(option)}
           >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,7 +14,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { searchModule, setSearchText } from './SearchDucks';
 
 export default function Header() {
-  const [timeOutId, registerTimeOut] = useState(null);
   const logOutDialog = useSimpleModal();
   const { searchText } = useSelector((state) => state[searchModule]);
   const classes = useStyles();
@@ -22,12 +21,6 @@ export default function Header() {
 
   const onSearch = ({ target: { value } }) => {
     dispatch(setSearchText(value));
-    // clearTimeout(timeOutId);
-    // registerTimeOut(
-    //   setTimeout(() => {
-    //     dispatch(setSearchText(value));
-    //   }, 1000)
-    // );
   };
 
   return (
