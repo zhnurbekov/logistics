@@ -1,0 +1,141 @@
+/* nunito-regular - latin_cyrillic */
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./font/nunito-regular.woff') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html,
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.content {
+  min-height: calc(100vh - 80px);
+  width: 100%;
+}
+
+.container-1200 {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-1600 {
+  max-width: 1600px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fullwidth,
+.fullWidth {
+  width: 100%;
+}
+
+/*
+  Notification
+ */
+
+.notification-container--top-right {
+  margin-top: 62px;
+  margin-right: 20px;
+  width: auto;
+  .notification {
+    width: auto !important;
+    min-width: 350px !important;
+  }
+}
+.notification__item .notification__content {
+  padding: 15px !important;
+  max-width: 650px;
+  white-space: pre-line;
+  max-height: 300px;
+  overflow-y: auto;
+  cursor: default;
+}
+
+/**
+	Подсказки для Js style
+ */
+.text-primary {
+}
+.text-secondary {
+}
+
+// color
+.color-primary {
+}
+.color-secondary {
+}
+.color-success {
+}
+.color-error {
+}
+.color-warn {
+}
+.color-action {
+}
+
+// background
+.bg-color {
+}
+.bg-primary {
+}
+.bg-secondary {
+}
+
+// border
+.border {
+}
+.border-top {
+}
+.border-radius {
+}
+.border-primary {
+}
+.border-secondary {
+}
+.border-warn {
+}
+
+.desktop {
+  display: inherit;
+}
+.mobile {
+  display: none !important;
+}
+
+.link {
+  color: #1976d2;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+.link:hover {
+  text-decoration: underline !important;
+}
+
+.main-container {
+  width: calc(100% - 270px);
+}
+
+.content-body{
+  min-height: calc(100vh - 121px)
+}

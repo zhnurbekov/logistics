@@ -1,0 +1,33 @@
+import { addTranslation } from '../../_helpers/translate';
+
+addTranslation({
+  ru: {
+    date: 'Дата',
+    date_picker_placeholder: 'день/месяц/год, час:мин',
+    custom_date_picker_placeholder: 'день/месяц/год, час:мин - день/месяц/год, час:мин',
+    monday: 'понедельник',
+    tuesday: 'вторник',
+    wednesday: 'среда',
+    thursday: 'четверг',
+    friday: 'пятница',
+    saturday: 'суббота',
+    sunday: 'воскресенье',
+    january: 'Январь',
+    february: 'Февраль',
+    march: 'Март',
+    april: 'Апрель',
+    may: 'Май',
+    june: 'Июнь',
+    july: 'Июль',
+    august: 'Август',
+    september: 'Сентябрь',
+    october: 'Октябрь',
+    november: 'Ноябрь',
+    december: 'Декабрь',
+    set_date_label: 'Установить дату',
+    set_date: 'Установить',
+    set_time: 'Введите время',
+    hour: 'Час',
+    minute: 'Минута',
+  },
+});
